@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Play TV - Deportes</title>
+    <style>
+        body { background-color: #000; margin: 0; padding: 0; overflow: hidden; height: 100vh; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+    <iframe 
+        src="https://srstreamtpnew.com/" 
+        sandbox="allow-forms allow-scripts allow-same-origin allow-presentation allow-fullscreen"
+        allowfullscreen>
+    </iframe>
+    <script>
+        window.open = function() { return null; };
+    </script>
+</body>
+</html>
