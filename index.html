@@ -1,18 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play TV Argentina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Play TV - Sin Anuncios</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: black; }
-        iframe { width: 100%; height: 100%; border: none; }
-        .bloqueo { position: absolute; top: 0; left: 0; width: 100%; height: 50px; background: black; z-index: 999; }
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #000; }
+        
+        /* Contenedor del reproductor */
+        .contenedor-tv {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            /* Esta es la clave: intentamos que el iframe no deje abrir ventanas nuevas */
+            sandbox: allow-forms allow-scripts allow-same-origin;
+        }
+
+        /* Capa invisible para atrapar clics basura si aparecen arriba */
+        .capa-protectora {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px; /* Tapa la cabecera donde suele haber banners */
+            background: rgba(0,0,0,0.9);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <div class="bloqueo"></div> 
+    <div class="capa-protectora">PLAY TV ARGENTINA</div>
     
-    <iframe src="https://tvplusgratis2.com/" allowfullscreen></iframe>
+    <div class="contenedor-tv">
+        <iframe 
+            src="https://tvplusgratis2.com/" 
+            sandbox="allow-forms allow-scripts allow-same-origin"
+            allowfullscreen>
+        </iframe>
+    </div>
 </body>
 </html>
