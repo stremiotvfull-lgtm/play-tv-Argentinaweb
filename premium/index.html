@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PLAY TV PREMIUM</title>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #000; }
+        
+        /* Barra superior con tu marca */
+        .header-custom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to bottom, #111, #000);
+            color: #00ffcc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            z-index: 9999;
+            border-bottom: 2px solid #00ffcc;
+        }
+
+        .contenedor-web {
+            position: relative;
+            width: 100%;
+            height: calc(100% - 50px);
+            margin-top: 50px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-custom">PLAY TV - MODO PREMIUM</div>
+    
+    <div class="contenedor-web">
+        <iframe 
+            src="https://sololatino.net/" 
+            sandbox="allow-forms allow-scripts allow-same-origin"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</body>
+</html>
