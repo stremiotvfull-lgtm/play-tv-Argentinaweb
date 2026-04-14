@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAY TV - CANALES</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; padding: 10px; }
+        .header { text-align: center; color: #00ffcc; padding: 10px; border-bottom: 2px solid #00ffcc; margin-bottom: 15px; }
+        #search { width: 90%; padding: 12px; border-radius: 8px; border: none; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto; }
+        .channel-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .channel-item { background: #222; padding: 15px; border-radius: 10px; text-align: center; cursor: pointer; border: 1px solid #333; font-size: 14px; color: #00ffcc; font-weight: bold; }
+        #player-container { position: sticky; top: 0; background: #000; padding: 5px; display: none; z-index: 100; }
+        video { width: 100%; border-radius: 5px; border: 1px solid #00ffcc; }
+    </style>
+</head>
+<body>
+
+<div class="header">PLAY TV ARGENTINA - PREMIUM</div>
+
+<div id="player-container">
+    <video id="video" controls></video>
+    <button onclick="cerrarPlayer()" style="background:red; color:white; width:100%; border:none; padding:10px; margin-top:5px; border-radius:5px; font-weight:bold;">CERRAR REPRODUCTOR</button>
+</div>
+
+<input type="text" id="search" placeholder="Buscar tu canal..." onkeyup="filterChannels()">
+
+<div class="channel-list" id="list">
+    <p style="text-align:center;">Cargando señal...</p>
+</div>
+
+<script>
+    // Usamos el Proxy para que el servidor de la lista no nos rechace
+    const m3uUrl = 'https://corsproxy.io/?' + encodeURIComponent('http://rlatinop.com:8880/get.php?username=Alber445&password=2mqUDv2jUmrS&type=m3u_plus');
+    let channels = [];
+
+    async function loadM3U() {
+        try {
+            const response = await fetch(m3uUrl);
+            const data = await response.text();
+            parseM3U(data);
+        } catch (e) { document.getElementById('list').innerHTML = "Error: El servidor está ocupado. Reintentá."; }
+    }
+
+    function parseM3U(data) {
+        const lines = data.split('\n');
+        for (let i = 0; i < lines.length; i++) {
+            if (lines[i].startsWith('#EXTINF:')) {
+                const parts = lines[i].split(',');
+                const name = parts[parts.length - 1].trim();
+                const link = lines[i + 1].trim();
+                if (link && link.startsWith('http')) {
+                    channels.push({ name, link });
+                }
+            }
+        }
+        renderChannels(channels);
+    }
+
+    function renderChannels(list) {
+        const container = document.getElementById('list');
+        container.innerHTML = list.map(c => `<div class="channel-item" onclick="playChannel('${c.link}')">${c.name}</div>`).join('');
+    }
+
+    function filterChannels() {
+        const query = document.getElementById('search').value.toLowerCase();
+        const filtered = channels.filter(c => c.name.toLowerCase().includes(query));
+        renderChannels(filtered);
+    }
+
+    function playChannel(url) {
+        const video = document.getElementById('video');
+        document.getElementById('player-container').style.display = 'block';
+        if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource(url);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+        } else {
+            video.src = url;
+            video.play();
+        }
+        window.scrollTo(0,0);
+    }
+
+    function cerrarPlayer() {
+        const video = document.getElementById('video');
+        video.pause();
+        document.getElementById('player-container').style.display = 'none';
+    }
+
+    loadM3U();
+</script>
+</body>
+</html>
