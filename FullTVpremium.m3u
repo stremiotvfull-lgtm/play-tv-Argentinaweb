@@ -1,0 +1,105 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-name=" TYC SPORTS" tvg-logo= "https://upload.wikimedia .org/wikipedia/commons /thumb/1/14/TyC_Sports _logo_2023.svg/1200px-Тус _Sports_logo_2023.svg.png" group-title="ARGENTINA ", 🇦🇷TYC SPORTS 
+https://live-04-11-tyc24.vodgc.net/tyc24/index_tyc24_1080.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/u7L8Q8H.png" group-title="Anime", Anime Vision Classics
+https://d82pyvmcw2kdc.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-swfivzrzwamaq/live/fast-channel-animevisionclassics-efc8dc6d/fast-channel-animevisionclassics-efc8dc6d.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/u7L8Q8H.png" group-title="Anime", Anime Vision
+https://d1ujfw1zyymzyd.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-a6fukwkbxmex8/live/fast-channel-animevision-64527ec0/fast-channel-animevision-64527ec0.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Yv6CqfN.png" group-title="Retro", Energeek Retro
+https://backend.energeek.cl/webtv/egretroweb/index.m3u8?token=ZZDemoIPTVGH
+#EXTINF:-1 tvg-logo="https://i.imgur.com/7XW2ZpX.png" group-title="Dibujos", Xtrema Cartoons
+https://stmv6.voxtvhd.com.br/xtremacartoons/xtremacartoons/playlist.m3u8
+#EXTINF:-1 group-title="Provinciales", Canal 3 La Pampa
+https://stream.arcast.com.ar/c3lapampa/ngrp:c3lapampa_all/playlist.m3u8
+#EXTINF:-1 group-title="Provinciales", Canal 4 San Juan
+https://streamlov.alsolnet.com/canal4sanjuan/live/playlist.m3u8
+#EXTINF:-1 group-title="Nacionales", UNITEVE
+https://vivo.solumedia.com:19360/uniteve/uniteve.m3u8
+#EXTINF:-1 group-title="Internacionales", ATV Sur (Perú)
+https://alba-pe-atv-atvsur.stream.mediatiquestream.com/index.m3u8
+#EXTINF:-1 group-title="Provinciales", Canal 4 (La Pampa)
+https://5cd577a3dd8ec.streamlock.net/CANAL4/smil:CANAL4.smil/playlist.m3u8
+#EXTINF:-1 group-title="Provinciales", Canal 3 (General Pico)
+https://stream.arcast.com.ar/canal3/canal3/playlist.m3u8
+#EXTINF:-1 group-title="Otros", Barbe TV
+https://cdn.streamhispanatv.net:3549/live/barbetvlive.m3u8
+#EXTINF:-1 group-title="Internacionales", GO TV (Paraguay)
+https://rds3.desdeparaguay.net/gotv/gotv/playlist.m3u8
+#EXTINF:-1 group-title="Otros", Canal Stream TV 12
+https://streamtv12.ddns.net:5443/LiveApp/streams/193945633734205616732920.m3u8
+#EXTINF:-1 group-title="Cine y Series", Cine Latino
+https://a-cdn.klowdtv.com/live1/cine_720p/playlist.m3u8
+#EXTINF:-1 group-title="Cine y Series", Crimen (WB)
+https://s10host4.localnow.api.cms.amdvids.com/v1/master/c189661feba961c19bc5fb60b57879ee9b84548a/config13/playlist.m3u8?ads.cdnhost=s10host4.localnow.api.cms.amdvids.com&ads.playbackid=6A552BBF-F6F5-43F6-A5DB-BCE796FBCB7B&ads.n1=rule_id&ads.v1=31E67C91-301F-4DA0-997C-55E852CBE4CB-1752176430&ads.n3=qp_content_id&ads.v3=6A552BBF-F6F5-43F6-A5DB-BCE796FBCB7B&ads.n4=content_name&ads.v4=Crimen&ads.n21=us_privacy&ads.v21=1YNY&ads.n22=app_bundle&ads.v22=&ads.n23=content_type&ads.v23=channel&ads.n24=url&ads.v24=https%25253A%25252F%25252Flocalnow.com%25252Fchannels%25252Fcbs-news-chicago-hyperlocal&ads.n25=channel_brand_id&ads.v25=AMDB013587&ads.n26=gpp_sid&ads.v26=&ads.n27=channel_name&ads.v27=Crimen&ads.n28=app_store_url&ads.v28=&ads.n29=gpp&ads.v29=&ads.n30=device_type&ads.v30=&ads.n31=content_provider&ads.v31=crimen-de-wbtv-crimen&ads.n32=channel_corp&ads.v32=Warner%20Brothers%20Discovery&ads.n33=channel_rating&ads.v33=TV-PG&ads.n34=app_name&ads.v34=&ads.n35=content_custom_3_param&ads.v35=channel&ads.n36=content_livestream&ads.v36=1&ads.n37=channel_genre&ads.v37=En%20Espanol&ads.n38=w&ads.v38=1920&ads.n39=pos&ads.v39=midroll&ads.n40=cust_devicename&ads.v40=desktop_web&ads.n41=ua&ads.v41=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F122.0.0.0%20Safari%2F537.36&ads.n42=content_custom_1_param&ads.v42=6A552BBF-F6F5-43F6-A5DB-BCE796FBCB7B&ads.n43=device_make&ads.v43=&ads.n44=app_version&ads.v44=0.0.0&ads.n45=ip&ads.v45=193.228.206.147&ads.n46=channel_language&ads.v46=en&ads.n47=content_custom_2_param&ads.v47=AMDB013587&ads.n48=channel_title&ads.v48=Crimen&ads.n49=did&ads.v49=&ads.n50=content_producer_name&ads.v50=Warner%20Brothers%20Discovery&ads.n51=channel_id&ads.v51=6A552BBF-F6F5-43F6-A5DB-BCE796FBCB7B&ads.n52=network_name&ads.v52=crimen-de-wbtv-crimen&ads.n53=ifa_type&ads.v53=&ads.n54=dnt&ads.v54=&ads.n55=channel_ext_id&ads.v55=&ads.n56=device_model&ads.v56=&ads.n57=channel_company_id&ads.v57=AMDP500559&ads.n58=h&ads.v58=1080
+#EXTINF:-1 group-title="Provinciales", Canal 7 Catamarca
+https://stream.arcast.com.ar/canal7catamarca/ngrp:canal7catamarca_all/playlist.m3u8?DVR=
+#EXTINF:-1 tvg-name="🇲🇽 TELEMAX" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Telemax_logo.png/1200px-Telemax_logo.png" group-title="INTERNACIONAL 🌎",🇲🇽 TELEMAX (MÉXICO)
+https://mlb.essastream.com:8081/telemax/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="⭐ ESTRELLA TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Estrella_TV_logo.svg/1200px-Estrella_TV_logo.svg.png" group-title="RECOMENDADOS 👌",⭐ ESTRELLA TV (EE.UU)
+https://estrellatv-oando.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-name="⭐ MYTIME" tvg-logo="https://i.ibb.co/vYxV3Rk/mytime.png" group-title="RECOMENDADOS 👌",⭐ MYTIME (MÉXICO 🇲🇽)
+https://appletree-mytime-samsungmexico.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Otros", Teledorada HD
+https://movil.ejeserver.com/live/teledoradahd.m3u8
+#EXTINF:-1 group-title="Otros", Canal 8 TV
+https://movil.ejeserver.com/live/canal8tv.m3u8
+#EXTINF:-1 group-title="Otros", Universo TV
+https://live20.bozztv.com/giatv/giatv-universotv/universotv/chunks.m3u8?PlaylistM3UCL
+#EXTINF:-1 tvg-name="⭐ AURORA MF" tvg-logo="https://i.ibb.co/Vp6q9yD/aurora-mf.png" group-title="RECOMENDADOS 👌",⭐ AURORA MF (CINEMX)
+https://cdn.streamhispanatv.net:3417/live/auroramflive.m3u8
+
+
+
+#EXTINF:-1 tvg-name="EXTREMA KIDS" tvg-logo="https://i.postimg.cc/9FmS907R/exk.png" group-title="CRISTIANOS",EXTREMA KIDS
+https://627bb251f23c7.streamlock.net:444/ExtremaKids/ExtremaKids/playlist.m3u8
+#EXTINF:-1 tvg-name="ESNE TV" tvg-logo="https://elsembrador.org/wp-content/uploads/2021/01/esne-logo.png" group-title="CRISTIANOS",ESNE TV
+https://origin.dpsgo.com/ssai/event/LhHrVtyeQkKZ-Ye_xEU75g/master.m3u8
+#EXTINF:-1 tvg-name="ALPAVISIÓN" tvg-logo="https://i.postimg.cc/L5Ym3TVM/alp.png" group-title="CRISTIANOS",ALPAVISIÓN
+https://stmv1.voxtvhd.com.br/alpavision/alpavision/playlist.m3u8
+#EXTINF:-1 tvg-name="ASOMA TV" tvg-logo="https://i.postimg.cc/W1vWRcKd/asoma.png" group-title="CRISTIANOS",ASOMA TV
+https://asomatv.cloud-ip.cc/livestream/stream.m3u8
+#EXTINF:-1 tvg-name=🕊️"AVIVAMIENTO" tvg-logo="https://i.postimg.cc/t4mS9m9R/aviv.png" group-title="CRISTIANOS",🕊️AVIVAMIENTO
+https://s1.abntelevision.com/avivamientoabr/stream/avivamientohd/avivamientohd/playlist.m3u8
+#EXTINF:-1 tvg-name="SUBLIME🕊️ TV" tvg-logo="https://i.postimg.cc/mDpm40Xs/sub.png" group-title="CRISTIANOS",SUBLIME🕊️TV
+https://5f700d5b2c46f.streamlock.net/sublime/sublime/playlist.m3u8
+#EXTINF:-1 tvg-name="TELE🕊️FAMILIA" tvg-logo="https://i.postimg.cc/hjLRB1sn/tfam.png" group-title="CRISTIANOS",TELE🕊️FAMILIA
+https://stmv2.voxtvhd.com.br/telefamilia/telefamilia/playlist.m3u8
+#EXTINF:-1 tvg-name="LA MORADA🕊️TV" tvg-logo="https://i.postimg.cc/mgg91d1d/morada.png" group-title="CRISTIANOS",LA MORADA🕊️TV
+https://movil.ejeserver.com/live/lamoradatv.m3u8
+#EXTINF:-1 tvg-name="VIENTO🕊️ RECIO" tvg-logo="https://i.postimg.cc/762FM9M9/vrec.png" group-title="CRISTIANOS",VIENTO🕊️RECIO
+https://stmvideo6.livecastv.com/vientorecio/vientorecio/playlist.m3u8?PlaylistM3UCL
+#EXTINF:-1 tvg-name="BENDICIÓN🕊️CHANNEL" tvg-logo="https://i.postimg.cc/PJCbD27s/bend.png" group-title="CRISTIANOS",BENDICIÓN🕊️ CHANNEL
+https://s.emisoras.tv:8081/bendicionchannel/index.m3u8
+#EXTINF:-1 tvg-name="📺 LOS PITUFOS 24/7" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/15/The_Smurfs_logo.svg/1200px-The_Smurfs_logo.svg.png" group-title="DIBUJOS 24/7 📺",📺 LOS PITUFOS 24/7
+https://jmp2.uk/stvp-ESBD130000205
+#EXTINF:-1 tvg-name="📺 RUGRATS 24/7" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Rugrats_logo.svg/1200px-Rugrats_logo.svg.png" group-title="CANALÉS 24/7 📺",📺 RUGRATS 24/7
+https://jmp2.uk/stvp-ESBA33000324U
+#EXTINF:-1 tvg-name="📺 BOB ESPONJA 24/7" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_logo.svg/1200px-SpongeBob_SquarePants_logo.svg.png" group-title="DIBUJOS 24/7 📺",📺 BOB ESPONJA 24/7
+https://jmp2.uk/stvp-ESBA33000262Z
+#EXTINF:-1 tvg-name="📺 CANAL INFANTIL (MIX)" tvg-logo="https://i.ibb.co/9V0ZJ7Z/kids-mix.png" group-title="INFANTILES 🧸",📺 CANAL INFANTIL (MIX)
+https://jmp2.uk/stvp-ES300029LP
+#EXTINF:-1 tvg-name="DIOS TV KIDS" tvg-logo="https://i.postimg.cc/PJCbD27s/dtv.png" group-title="INFANTILES Y VARIEDAD",DIOS TV KIDS
+https://s.emisoras.tv:8081/diostevekids/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-name="ZONA HITS TV" tvg-logo="https://i.postimg.cc/85M7PZqH/zhits.png" group-title="INFANTILES Y VARIEDAD",ZONA HITS TV
+https://5790d294af2dc.streamlock.net/zonahitstv1/zonahitstv1/chunklist_w902407643.m3u8
+#EXTINF:-1 tvg-name="VISION TV" tvg-logo="https://i.postimg.cc/6pXyXyXW/vision.png" group-title="INFANTILES Y VARIEDAD",VISION TV
+https://cdn.streamhispanatv.net:3076/live/visiontvlive.m3u8
+#EXTINF:-1 tvg-name="SOL TV" tvg-logo="https://i.postimg.cc/1X6Gq0f6/sol.png" group-title="INFANTILES Y VARIEDAD",SOL TV
+https://cdn.streamhispanatv.net:3409/live/soltvlive.m3u8
+#EXTINF:-1 tvg-name="LOVE THE PLANET" tvg-logo="https://i.postimg.cc/t4mS9m9R/love.png" group-title="INFANTILES Y VARIEDAD",LOVE THE PLANET
+https://amg01821-lovetvchannels-lovetheplanetsp-tivify-tivify-vycsr.amagi.tv/1080p/index.m3u8
+#EXTINF:-1 tvg-name="FULL HD RETRO" tvg-logo="https://i.postimg.cc/hjLRB1sn/retro.png" group-title="INFANTILES Y VARIEDAD",FULL HD RETRO
+https://tvservices.fullhd-streaming.com:3963/live/tvgroupretroxtvlive.m3u8
+#EXTINF:-1 tvg-name="SUBLIME VARIEDAD" tvg-logo="https://i.postimg.cc/mDpm40Xs/subv.png" group-title="INFANTILES Y VARIEDAD",SUBLIME VARIEDAD
+https://5f700d5b2c46f.streamlock.net/sublime/sublime/chunklist_w487200319.m3u8
+#EXTINF:-1 tvg-name="STREAMING LIVE HD" tvg-logo="https://i.postimg.cc/mgg91d1d/slive.png" group-title="INFANTILES Y VARIEDAD",STREAMING LIVE HD
+https://cloud2.streaminglivehd.com:1936/8078/8078/chunklist_w514476866.m3u8
+#EXTINF:-1 tvg-name="MEDIOS COSTA RICA" tvg-logo="https://i.postimg.cc/c4JBDzkR/cr.png" group-title="INFANTILES Y VARIEDAD",MEDIOS COSTA RICA
+https://acceso.mediosdecostarica.com:3873/hybrid/play.m3u8
+
+
+#EXTINF:-1 tvg-name="⚽ TYC SPORTS" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/TyC_Sports_logo_2023.svg/1200px-TyC_Sports_logo_2023.svg.png" group-title="FÚTBOL ARGENTINO 🇦🇷 ⚽",⚽ TYC SPORTS (FULL HD)
+https://live-04-11-tyc24.vodgc.net/tyc24/index_tyc24_1080.m3u8
+
