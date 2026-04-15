@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLAY TV - CANALES</title>
+    <title>PLAY TV - PREMIUM</title>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; padding: 10px; }
-        .header { text-align: center; color: #00ffcc; padding: 10px; border-bottom: 2px solid #00ffcc; margin-bottom: 15px; }
-        #search { width: 90%; padding: 12px; border-radius: 8px; border: none; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto; }
+        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; padding: 10px; text-align: center; }
+        .header { color: #00ffcc; padding: 10px; border-bottom: 2px solid #00ffcc; margin-bottom: 15px; font-weight: bold; }
+        #search { width: 90%; padding: 12px; border-radius: 8px; border: none; margin-bottom: 15px; background: #222; color: #fff; }
         .channel-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        .channel-item { background: #222; padding: 15px; border-radius: 10px; text-align: center; cursor: pointer; border: 1px solid #333; font-size: 14px; color: #00ffcc; font-weight: bold; }
+        .channel-item { background: #1a1a1a; padding: 15px; border-radius: 10px; cursor: pointer; border: 1px solid #333; font-size: 13px; color: #00ffcc; }
         #player-container { position: sticky; top: 0; background: #000; padding: 5px; display: none; z-index: 100; }
-        video { width: 100%; border-radius: 5px; border: 1px solid #00ffcc; }
+        video { width: 100%; border: 1px solid #00ffcc; }
+        .loading { color: orange; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -21,35 +22,38 @@
 
 <div id="player-container">
     <video id="video" controls></video>
-    <button onclick="cerrarPlayer()" style="background:red; color:white; width:100%; border:none; padding:10px; margin-top:5px; border-radius:5px; font-weight:bold;">CERRAR REPRODUCTOR</button>
+    <button onclick="cerrarPlayer()" style="background:red; color:white; width:100%; border:none; padding:10px; margin-top:5px; border-radius:5px;">CERRAR</button>
 </div>
 
-<input type="text" id="search" placeholder="Buscar tu canal..." onkeyup="filterChannels()">
+<input type="text" id="search" placeholder="Escribí el canal aquí..." onkeyup="filterChannels()">
 
-<div class="channel-list" id="list">
-    <p style="text-align:center;">Cargando señal...</p>
-</div>
+<div id="status" class="loading">Buscando señal de canales...</div>
+<div class="channel-list" id="list"></div>
 
 <script>
-    // Usamos el Proxy para que el servidor de la lista no nos rechace
-    const m3uUrl = 'https://corsproxy.io/?' + encodeURIComponent('http://rlatinop.com:8880/get.php?username=Alber445&password=2mqUDv2jUmrS&type=m3u_plus');
+    // Usamos un proxy diferente y más rápido
+    const m3uUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('http://rlatinop.com:8880/get.php?username=Alber445&password=2mqUDv2jUmrS&type=m3u_plus');
     let channels = [];
 
     async function loadM3U() {
         try {
             const response = await fetch(m3uUrl);
+            if (!response.ok) throw new Error();
             const data = await response.text();
+            document.getElementById('status').style.display = 'none';
             parseM3U(data);
-        } catch (e) { document.getElementById('list').innerHTML = "Error: El servidor está ocupado. Reintentá."; }
+        } catch (e) {
+            document.getElementById('status').innerHTML = "Reintentando conexión...";
+            setTimeout(loadM3U, 3000); // Si falla, reintenta a los 3 segundos
+        }
     }
 
     function parseM3U(data) {
         const lines = data.split('\n');
         for (let i = 0; i < lines.length; i++) {
-            if (lines[i].startsWith('#EXTINF:')) {
-                const parts = lines[i].split(',');
-                const name = parts[parts.length - 1].trim();
-                const link = lines[i + 1].trim();
+            if (lines[i].includes('#EXTINF:')) {
+                const name = lines[i].split(',')[1] || "Canal sin nombre";
+                const link = lines[i + 1]?.trim();
                 if (link && link.startsWith('http')) {
                     channels.push({ name, link });
                 }
@@ -60,6 +64,10 @@
 
     function renderChannels(list) {
         const container = document.getElementById('list');
+        if (list.length === 0) {
+            container.innerHTML = "<p>No se encontraron canales.</p>";
+            return;
+        }
         container.innerHTML = list.map(c => `<div class="channel-item" onclick="playChannel('${c.link}')">${c.name}</div>`).join('');
     }
 
